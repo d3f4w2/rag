@@ -8,6 +8,8 @@ from rag.retrieval.rerank import rerank_cases
 from rag.retrieval.retrieve import retrieve_channels
 from rag.workflow.state import RagState
 
+NO_MATCH_ANSWER = "No matching evidence was found for the question."
+
 
 def run_rag(
     question: str,
@@ -70,6 +72,6 @@ def _ensure_index(index_dir: str, data_dir: str) -> None:
 
 def _compose_answer(state: RagState) -> str:
     if not state.evidence:
-        return "No matching evidence was found for the question."
+        return NO_MATCH_ANSWER
     case_ids = ", ".join(str(item["case_id"]) for item in state.evidence)
     return f"Top evidence cases: {case_ids}."
