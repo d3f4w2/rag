@@ -1,0 +1,5 @@
+langchain>=1.0
+langgraph
+chromadb
+pydantic
+pypdf
