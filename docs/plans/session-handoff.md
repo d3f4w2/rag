@@ -21,7 +21,7 @@ Last Updated: 2026-02-25
 ```
 
 ## Current Handoff
-## Handoff - 2026-02-25 09:44 (local)
+## Handoff - 2026-02-25 09:52 (local)
 - Completed:
   - [I1] Task 1-2 bootstrap and dependencies
   - [Task 3] parse example-data into case records
@@ -56,3 +56,4 @@ Last Updated: 2026-02-25
   - none
 - Notes:
   - Task 4-6 complete with TDD red/green evidence.
+  - Applied review feedback: strengthened PDF parser tests for extracted-value and missing-file fallback.
