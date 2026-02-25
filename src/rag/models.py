@@ -9,3 +9,5 @@ class CaseRecord:
     txt_path: str
     pdf_path: str
     image_paths: list[str]
+    cervix_findings: str | None = None
+    vagina_findings: str | None = None
