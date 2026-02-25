@@ -1,9 +1,4 @@
-# rag
-
-当前仓库处于 **文档先行阶段**：本阶段只维护方案与执行文档，不做业务代码实现。
-
-## 项目目标
-构建病例中心 RAG（CLI 形态），基于 `example-data` 完成证据检索、回答汇总与 RAGAS 质量门禁，确保结果可追溯且具备跨会话可执行性。
+# fixture
 
 ## 文档入口
 1. 产品需求：`docs/product/product-requirements.md`
@@ -13,12 +8,9 @@
 5. 全局进度看板：`docs/plans/progress-board.md`
 6. 会话交接记录：`docs/plans/session-handoff.md`
 7. 决策日志：`docs/plans/decision-log.md`
-8. 连续性验收清单：`docs/plans/operational-readiness-checklist.md`
-9. 连续性运行手册：`docs/plans/session-continuity-runbook.md`
+8. 连续性运行手册：`docs/plans/session-continuity-runbook.md`
 
 ## 会话连续性门禁
-每次会话开始和结束都执行：
-
 ```bash
 python tools/validate_session_continuity.py --strict
 ```
@@ -30,8 +22,3 @@ python tools/validate_session_continuity.py --strict
 4. 结束会话前更新：
    - `docs/plans/progress-board.md`
    - `docs/plans/session-handoff.md`
-
-## 当前阶段边界
-1. 允许：文档编写、计划细化、任务拆解。
-2. 禁止：业务代码实现、功能验证、上线操作。
-3. 锁定技术方向：病例中心多路检索 + LangGraph + RAGAS 硬门禁。
