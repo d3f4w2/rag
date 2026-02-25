@@ -37,10 +37,10 @@ def _score_channel(
         if label_filter and not case_id.startswith(f"{label_filter}/"):
             continue
         text = " ".join(str(v) for v in doc.values()).lower()
-        if query and query in text:
+        if query:
+            if query not in text:
+                continue
             score = 1.0
-        elif query:
-            score = 0.2
         else:
             score = 0.5
         scored.append({"case_id": case_id, "score": score})
