@@ -1,6 +1,6 @@
 ﻿# Session Handoff
 
-Status: Batch 1 complete  
+Status: Batch 2 in progress  
 Last Updated: 2026-02-25
 
 ## Handoff Template
@@ -21,14 +21,15 @@ Last Updated: 2026-02-25
 ```
 
 ## Current Handoff
-## Handoff - 2026-02-25 11:20 (local)
+## Handoff - 2026-02-25 09:41 (local)
 - Completed:
   - [I1] Task 1-2 bootstrap and dependencies
   - [Task 3] parse example-data into case records
+  - [Task 4] parse TXT findings into structured fields
 - In Progress:
-  - [I2] Task 3-6 ingest pipeline (Task 4 next)
+  - [I2] Task 3-6 ingest pipeline (Task 5 next)
 - Next First Command:
-  - `python -m pytest tests/ingest/test_txt_parser.py::test_parse_stain_text_extracts_two_fields -v`
+  - `python -m pytest tests/ingest/test_pdf_parser.py::test_extract_report_fields_returns_expected_keys -v`
 - Updated Files:
   - `src/rag/cli.py`
   - `tests/cli/test_cli_help.py`
@@ -41,9 +42,11 @@ Last Updated: 2026-02-25
   - `src/rag/ingest/__init__.py`
   - `src/rag/ingest/case_parser.py`
   - `tests/ingest/test_case_parser.py`
+  - `src/rag/ingest/txt_parser.py`
+  - `tests/ingest/test_txt_parser.py`
   - `docs/plans/progress-board.md`
   - `docs/plans/session-handoff.md`
 - Blockers:
   - none
 - Notes:
-  - Batch 1 complete with TDD red/green evidence and review fix for missing typer dependency.
+  - Task 4 complete with TDD red/green evidence.

@@ -1,6 +1,6 @@
 ﻿# RAG Progress Board
 
-Status: Batch 1 in progress  
+Status: Batch 2 in progress  
 Last Updated: 2026-02-25
 
 ## Status Enum
@@ -23,7 +23,7 @@ Last Updated: 2026-02-25
 | D8 | 连续性验收清单与Runbook | M0 | done | codex | 2026-02-25 | 2026-02-25 | 持续维护规则与SOP | none | `docs/plans/operational-readiness-checklist.md` |
 | D9 | 连续性校验脚本与测试 | M0 | verified | codex | 2026-02-25 | 2026-02-25 | `python tools/validate_session_continuity.py --strict` | none | `tools/validate_session_continuity.py` |
 | I1 | Task 1-2 bootstrap and deps | M1 | done | codex | 2026-02-25 | 2026-02-25 | `python -m pytest tests/ingest/test_txt_parser.py::test_parse_stain_text_extracts_two_fields -v` | none | `docs/plans/2026-02-24-rag-implementation.md` |
-| I2 | Task 3-6 ingest pipeline | M1 | in_progress | codex | 2026-02-25 | 2026-02-25 | `python -m pytest tests/ingest/test_txt_parser.py::test_parse_stain_text_extracts_two_fields -v` | none | `docs/plans/2026-02-24-rag-implementation.md` |
+| I2 | Task 3-6 ingest pipeline | M1 | in_progress | codex | 2026-02-25 | 2026-02-25 | `python -m pytest tests/ingest/test_pdf_parser.py::test_extract_report_fields_returns_expected_keys -v` | none | `docs/plans/2026-02-24-rag-implementation.md` |
 | I3 | Task 7-10 检索与工作流 | M2 | not_started | TBD | - | 2026-02-25 | `python -m pytest tests/index/test_build_index.py::test_rebuild_index_returns_stats -v` | none | `docs/plans/2026-02-24-rag-implementation.md` |
 | I4 | Task 11-12 评估与门禁 | M3 | not_started | TBD | - | 2026-02-25 | `python -m pytest tests/eval/test_ragas_runner_contract.py::test_run_eval_returns_metric_keys -v` | none | `docs/plans/2026-02-24-rag-implementation.md` |
 | I5 | Task 13 回归与收敛 | M4 | not_started | TBD | - | 2026-02-25 | `python -m pytest tests/e2e/test_minimal_e2e.py::test_placeholder_e2e -v` | none | `docs/plans/2026-02-24-rag-implementation.md` |
