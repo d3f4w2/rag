@@ -3,3 +3,4 @@ langgraph
 chromadb
 pydantic
 pypdf
+typer
